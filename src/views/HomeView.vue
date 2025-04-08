@@ -132,7 +132,7 @@ const start = () => {
               class="h-30 bg-black text-center flex items-center justify-center font-600 text-3xl border transition-all w-auto"
           >
         <img class=" h-[100%] " :src="items[item % 8].image" alt="" />
-        <p>{{index}}</p>{{items[item % 8].id}}
+        <p>{{index}}</p>
       </div>
     </div>
     <TheTimer :finish-time="isFinishTime" @finish-time="saveAndReset" @start-time="start"/>
