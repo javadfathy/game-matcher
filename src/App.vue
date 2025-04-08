@@ -19,7 +19,7 @@ const { showDialog, userScore, atTime } = storeToRefs(touchedStore)
     <main>
       <router-view />
     </main>
-    <TheDialog v-if="showDialog" :detail="{score: userScore, time: atTime}"/>
+    <TheDialog @close="touchedStore.resetData()" v-if="showDialog" :detail="{score: userScore, time: atTime}"/>
   </section>
 </template>
 

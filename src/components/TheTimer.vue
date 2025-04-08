@@ -42,7 +42,7 @@ const startCountdown = () => {
       if (seconds.value > 0 && !props.finishTime) {
         seconds.value--
       } else {
-        pauseTimer()
+        resetTimer()
       }
     }, 1000)
   }

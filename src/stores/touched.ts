@@ -18,6 +18,13 @@ export const useTouchedStore = defineStore('touched',  {
             userNewScore.push({userScore: this.userScore, atTime: this.atTime})
             localStorage.setItem('userScore', JSON.stringify( userNewScore))
             this.showDialog = true
+        },
+        async resetData() {
+            this.corrected = []
+            this.step = 0
+            this.userScore = null
+            this.atTime = 0
+            this.showDialog = false
         }
     }
 })
